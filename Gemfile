@@ -24,14 +24,14 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'devise'
 gem 'simple_form'
-gem 'carrierwave', '~> 2.0'
-gem 'fog', '~> 2.2'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
