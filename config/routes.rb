@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   get 'index', to: 'dashborad#index', as: :dashboard
-  get 'dashborad/properties'
-  get 'dashborad/reports'
   resources :properties
   devise_for :accounts
   root to: 'public#main'

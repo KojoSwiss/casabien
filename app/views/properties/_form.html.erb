@@ -1,37 +1,10 @@
-<%= form_with(model: property, local: true) do |form| %>
-  <%= render "layouts/nav/validation", item: @property %>
-  <div class="field mt-3">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: "form-control" %>
-  </div>
-
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address, class: "form-control"  %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price, class: "form-control"  %>
-  </div>
-
-  <div class="field">
-    <%= form.label :rooms %>
-    <%= form.number_field :rooms, class: "form-control"  %>
-  </div>
-
-  <div class="field">
-    <%= form.label :bathrooms %>
-    <%= form.number_field :bathrooms, class: "form-control"  %>
-  </div>
-
-  <div class="field">
-    <%= f.label :photo %>
-    <%= f.file_field :photo, class:"form-control" %>
-    <%= f.hidden_field :photo_cache %>
-  </div>
-
-  <div class="input-group">
-    <%= form.submit "Save Property", class: "btn btn-lg btn-success btn-block" %>
-  </div>
+<%= simple_form_for @property do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :price %>
+  <%= f.input :rooms %>
+  <%= f.input :bathrooms %>
+  <%= f.input :photo, as: :file %>
+  <%= f.button :submit %>
 <% end %>
+
